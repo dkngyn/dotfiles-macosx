@@ -141,6 +141,11 @@ config.keys = {
   -- zoom/unzoom current pane (tmux: prefix z)
   { mods = "LEADER", key = "z", action = wezterm.action.TogglePaneZoomState },
 
+  -- swap panes: rotate (tmux: prefix { / }) or pick one to swap with active
+  { mods = "LEADER", key = "{", action = wezterm.action.RotatePanes("CounterClockwise") },
+  { mods = "LEADER", key = "}", action = wezterm.action.RotatePanes("Clockwise") },
+  { mods = "LEADER", key = "s", action = wezterm.action.PaneSelect({ mode = "SwapWithActive" }) },
+
   -- send literal C-x to the shell (tmux: bind-key C-x send-prefix)
   { mods = "LEADER|CTRL", key = "x", action = wezterm.action.SendKey({ key = "x", mods = "CTRL" }) },
 
