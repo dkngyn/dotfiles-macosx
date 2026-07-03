@@ -148,7 +148,7 @@
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	gpgsign = false
 
 [diff]
 
@@ -205,8 +205,3 @@
 [user]
 	name = dan nguyen
 	email = dan.nguyen@clio.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE+gEVEbOy8GF69BbcBw803fgrkGJhBSCWSQrGjtg9Y3
-[gpg]
-	format = ssh
-[gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
